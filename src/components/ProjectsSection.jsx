@@ -98,7 +98,7 @@ export const ProjectsSection = () => {
 
         <div className="text-center mt-12">
           <a
-            href="#"
+            href="https://github.com/DeusAbIntus"
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
           >

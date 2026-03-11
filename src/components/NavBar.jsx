@@ -16,9 +16,9 @@ export const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10); // returns true if scrolled more than size of navbar
+      setIsScrolled(window.scrollY > 10); // returns true if scrolled more than size of navbar
     };
-
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -33,7 +33,10 @@ export const NavBar = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <a className="text-xl font-bold text-primary flex items-center">
+        <a
+          className="text-xl font-bold text-primary flex items-center"
+          href="#hero"
+        >
           <span className="relative z-10">
             <span className="text-glow text-foreground">Nitish Mulye</span>{" "}
             Portfolio
@@ -65,7 +68,7 @@ export const NavBar = () => {
         <div
           className={cn(
             "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
-            "tansition-all duration-300 md:hidden",
+            "transition-all duration-300 md:hidden",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none",

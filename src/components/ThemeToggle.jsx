@@ -4,13 +4,15 @@ import { cn } from "../lib/utils";
 
 export const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isScreenSmall, setIsScreenSmall] = useState(false);
 
   useEffect(() => {
+    setIsScreenSmall(window.innerWidth < 640);
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme === "light") {
       setIsDarkMode(false);
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "dark");
+      localStorage.setItem("theme", "light");
     } else {
       localStorage.setItem("theme", "dark");
       setIsDarkMode(true);
@@ -34,8 +36,8 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
-        "focus:outline-hidden",
+        "fixed z-50 p-2 rounded-full transition-colors duration-300 focus:outline-hidden",
+        isScreenSmall ? "top-15 right-8" : "top-5 right-5",
       )}
     >
       {isDarkMode ? (

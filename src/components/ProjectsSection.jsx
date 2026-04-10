@@ -3,30 +3,41 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Project 1",
-    description: "Description of Project 1",
-    imageURL: "/projects-images/project1.png",
-    tags: ["React", "Node.js", "PostgreSQL"],
-    demoURL: "https://project1-demo.com",
-    repoURL: "https://github.com",
+    title: "AI Gym Planner (PERN + OpenRouter)",
+    description:
+      "Full-stack AI workout planner that generates personalized training programs from user inputs. Built with a PERN stack, Neon Auth, and OpenRouter AI, with deployed frontend and backend.",
+    imageURL: "public/project-images/AI-gym-planner-cropped.png",
+    tags: ["TypeScript", "React", "Node.js", "Prisma", "OpenAI", "Neon"],
+    demoURL: "https://ai-gym-planner-deployment.vercel.app/",
+    repoURL: "https://github.com/DeusAbIntus/AI-Gym--Planner---Deployment.git",
   },
   {
     id: 2,
-    title: "Project 2",
-    description: "Description of Project 2",
-    imageURL: "/projects-images/project2.png",
-    tags: ["React", "Node.js", "PostgreSQL"],
-    demoURL: "https://project2-demo.com",
-    repoURL: "https://github.com",
+    title: "BookNotes — Full-Stack Book Review Blog",
+    description:
+      "A book review blog application that lets users create, edit, delete, and filter reviews. Built with React and Tailwind on the frontend, Express API backend, and PostgreSQL database, with deployed services and RESTful architecture.",
+    imageURL: "/projects-images/personal-book-blog-cropped.png",
+    tags: [
+      "PostgreSQL",
+      "React",
+      "Express",
+      "Tailwind",
+      "REST API",
+      "Full Stack",
+    ],
+    demoURL: "https://personal-book-blog-deployment.vercel.app/",
+    repoURL:
+      "https://github.com/DeusAbIntus/Personal-Book-Blog---Deployment.git",
   },
   {
     id: 3,
-    title: "Project 3",
-    description: "Description of Project 3",
-    imageURL: "/projects-images/project3.png",
-    tags: ["React", "Node.js", "PostgreSQL"],
-    demoURL: "https://project3-demo.com",
-    repoURL: "https://github.com",
+    title: "Keeper Notes – Full-Stack Note Taking App",
+    description:
+      "A full-stack note-taking application with CRUD functionality, backed by a PostgreSQL database. Users can create and delete notes with persistent storage. Built with a React frontend, Node.js API, and deployed using Vercel with a hosted Neon database.",
+    imageURL: "/projects-images/keeper-app.png",
+    tags: ["Javascript", "Node.js", "React", "Express", "PostgreSQL"],
+    demoURL: "https://keeper-app-deployment.vercel.app/",
+    repoURL: "https://github.com/DeusAbIntus/Keeper-App---Deployment.git",
   },
 ];
 

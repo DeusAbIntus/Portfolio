@@ -1,4 +1,4 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { Briefcase, Code, Network, Server, User } from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -24,9 +24,11 @@ export const AboutSection = () => {
             </p>
 
             <p className="text-muted-foreground">
-              Beyond coding, you can always find me in the gym or hikes or
-              engaging with the developer community. I'm always excited to
-              connect with fellow enthusiasts and collaborate on exciting
+              Beyond coding, you can either find me in the gym pushing my
+              limits, on hikes getting in touch with nature or meeting and
+              engaging with like-minded individuals. As a lifelong learner, both
+              in software development and in life in general, I'm always excited
+              to connect with fellow enthusiasts and collaborate on exciting
               projects.
             </p>
 
@@ -65,16 +67,16 @@ export const AboutSection = () => {
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
+                  <Server className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h1 className="font-semibold text-lg">
                     Backend application development
                   </h1>
                   <p className="text-muted-foreground">
-                    Building scalable and efficient backend systems using
-                    Node.js, Express, and Postgres to power dynamic web
-                    applications.
+                    Building server-side backend systems, with Node.js, Express,
+                    and Postgres, that are scalable, efficient and reliably
+                    power dynamic web applications.
                   </p>
                 </div>
               </div>
@@ -82,7 +84,7 @@ export const AboutSection = () => {
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
+                  <Network className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
                   <h1 className="font-semibold text-lg">

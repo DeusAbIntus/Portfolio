@@ -1,4 +1,25 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import {
+  ArrowRight,
+  ExternalLink,
+  Github,
+  CheckCircle,
+  Circle,
+} from "lucide-react";
+
+const statusConfig = {
+  completed: {
+    icon: <CheckCircle size={16} className="text-green-500" />,
+    label: "Completed",
+  },
+  "in-progress": {
+    icon: <Circle size={16} className="text-yellow-400" />,
+    label: "In Progress",
+  },
+  planned: {
+    icon: <Circle size={16} className="text-gray-400" />,
+    label: "Planned",
+  },
+};
 
 const projects = [
   {
@@ -6,17 +27,18 @@ const projects = [
     title: "AI Gym Planner (PERN + OpenRouter)",
     description:
       "Full-stack AI workout planner that generates personalized training programs from user inputs. Built with a PERN stack, Neon Auth, and OpenRouter AI, with deployed frontend and backend.",
-    imageURL: "public/project-images/AI-gym-planner-cropped.png",
+    imageURL: "/project-images/AI-gym-planner-cropped.png",
     tags: ["TypeScript", "React", "Node.js", "Prisma", "OpenAI", "Neon"],
     demoURL: "https://ai-gym-planner-deployment.vercel.app/",
     repoURL: "https://github.com/DeusAbIntus/AI-Gym--Planner---Deployment.git",
+    status: "in-progress",
   },
   {
     id: 2,
-    title: "BookNotes — Full-Stack Book Review Blog",
+    title: "BookNotes — Book Review Blog",
     description:
       "A book review blog application that lets users create, edit, delete, and filter reviews. Built with React and Tailwind on the frontend, Express API backend, and PostgreSQL database, with deployed services and RESTful architecture.",
-    imageURL: "/projects-images/personal-book-blog-cropped.png",
+    imageURL: "/project-images/personal-book-blog-cropped.png",
     tags: [
       "PostgreSQL",
       "React",
@@ -28,16 +50,18 @@ const projects = [
     demoURL: "https://personal-book-blog-deployment.vercel.app/",
     repoURL:
       "https://github.com/DeusAbIntus/Personal-Book-Blog---Deployment.git",
+    status: "completed",
   },
   {
     id: 3,
-    title: "Keeper Notes – Full-Stack Note Taking App",
+    title: "Keepy Notes – Digital sticky note app",
     description:
       "A full-stack note-taking application with CRUD functionality, backed by a PostgreSQL database. Users can create and delete notes with persistent storage. Built with a React frontend, Node.js API, and deployed using Vercel with a hosted Neon database.",
-    imageURL: "/projects-images/keeper-app.png",
+    imageURL: "/project-images/keeper-app.png",
     tags: ["Javascript", "Node.js", "React", "Express", "PostgreSQL"],
     demoURL: "https://keeper-app-deployment.vercel.app/",
     repoURL: "https://github.com/DeusAbIntus/Keeper-App---Deployment.git",
+    status: "completed",
   },
 ];
 
@@ -61,7 +85,7 @@ export const ProjectsSection = () => {
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="relative group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -88,18 +112,28 @@ export const ProjectsSection = () => {
                   <div className="flex space-x-3">
                     <a
                       href={project.demoURL}
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      className="flex items-center gap-1 text-foreground/80 hover:text-primary transition-colors duration-300"
                       target="_blank"
                     >
                       <ExternalLink size={20} />
+                      <span>Demo</span>
                     </a>
+
                     <a
                       href={project.repoURL}
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      className="flex items-center gap-1 text-foreground/80 hover:text-primary transition-colors duration-300"
                       target="_blank"
                     >
                       <Github size={20} />
+                      <span>Repo</span>
                     </a>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    {statusConfig[project.status].icon}
+                    <span className="text-xs text-muted-foreground">
+                      {statusConfig[project.status].label}
+                    </span>
                   </div>
                 </div>
               </div>

@@ -37,13 +37,13 @@ export const AboutSection = () => {
                 Get in Touch
               </a>
 
-              <a
-                href="src\assets\documents\resume.pdf"
+              {/* <a
+                href=""
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
                 target="_blank"
               >
                 Download CV
-              </a>
+              </a> */}
             </div>
           </div>
 

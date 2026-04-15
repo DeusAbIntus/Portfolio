@@ -24,7 +24,7 @@ const statusConfig = {
 const projects = [
   {
     id: 1,
-    title: "AI Gym Planner (PERN + OpenRouter)",
+    title: "AI Gym Planner (OpenAI)",
     description:
       "Full-stack AI workout planner that generates personalized training programs from user inputs. Built with a PERN stack, Neon Auth, and OpenRouter AI, with deployed frontend and backend.",
     imageURL: "/project-images/AI-gym-planner-cropped.png",

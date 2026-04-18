@@ -24,7 +24,7 @@ const statusConfig = {
 const projects = [
   {
     id: 1,
-    title: "AI Gym Planner (OpenAI)",
+    title: "Train.AI — Workout Planner with OpenAI",
     description:
       "Full-stack AI workout planner that generates personalized training programs from user inputs. Built with a PERN stack, Neon Auth, and OpenRouter AI, with deployed frontend and backend.",
     imageURL: "/project-images/AI-gym-planner-cropped.png",
@@ -35,7 +35,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "BookNotes — Book Review Blog",
+    title: "Tower of Books — Book Review Blog",
     description:
       "A book review blog application that lets users create, edit, delete, and filter reviews. Built with React and Tailwind on the frontend, Express API backend, and PostgreSQL database, with deployed services and RESTful architecture.",
     imageURL: "/project-images/personal-book-blog-cropped.png",
@@ -54,7 +54,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Keepy Notes – Digital sticky note app",
+    title: "Keepy Notes — Digital Sticky Note App",
     description:
       "A full-stack note-taking application with CRUD functionality, backed by a PostgreSQL database. Users can create and delete notes with persistent storage. Built with a React frontend, Node.js API, and deployed using Vercel with a hosted Neon database.",
     imageURL: "/project-images/keeper-app.png",

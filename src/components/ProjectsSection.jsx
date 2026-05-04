@@ -31,7 +31,7 @@ const projects = [
     tags: ["TypeScript", "React", "Node.js", "Prisma", "OpenAI", "Neon"],
     demoURL: "https://ai-gym-planner-deployment.vercel.app/",
     repoURL: "https://github.com/DeusAbIntus/AI-Gym--Planner---Deployment.git",
-    status: "in-progress",
+    status: "completed",
   },
   {
     id: 2,
